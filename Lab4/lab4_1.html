@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Zadanie 1</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		'use strict';
+		let book1 = {};
+
+		book1.title = "Пособие по JS";
+		book1.pubYear = 2014;
+		book1.price = 1400;
+
+		let book2 = {
+			title: "Теория вероятности",
+			pubYear: 1978,
+			price: 1000
+		};
+
+		console.log("book1:\n");
+		for (let el in book1)
+			console.log(el + ": " + book1[el]);
+
+		console.log("\n");
+
+		console.log("book2:\n");
+		for (let el in book2)
+			console.log(el + ": " + book2[el]);
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Zadanie 2</title>
+	<script type="text/javascript">
+		'use strict';
+		function showBook(){
+			console.log("book:\n");
+			console.log("Title: " + this.title + "\n");
+			console.log("Price: " + this.price + "\n");
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		'use strict';
+		let book1 = {
+			title: "Основы JS",
+			pubYear: 2020,
+			price: 1400,
+			show: function(){
+				console.log("book1:\n");
+				console.log("Title: " + this.title + "\n");
+				console.log("Price: " + this.price + "\n");
+			}
+		};
+
+		let book2 = {
+			title: "Теория вероятности 2",
+			pubYear: 2010,
+			price: 1200,
+			show: showBook
+		};
+
+		book1.show();
+		console.log("\n");
+		book2.show();
+	</script>
+</body>
+</html>
