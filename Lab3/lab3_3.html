@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang=ru>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 3</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        function checkSpam(str) {
+            str = str.toLowerCase();
+            if ((str.includes('xxx')) || (str.includes('viagra')))
+                return true;
+            else return false;
+        }
+        let str = prompt("Введи строку");
+        alert(checkSpam(str));
+    </script>
+</body>
+
+</html>

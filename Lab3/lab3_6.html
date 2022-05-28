@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang=ru>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 6</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        function fib(n) {
+            let count = 0;
+            let n1 = 1,
+                n2 = 1,
+                c = 0;
+            if (n == 0)
+                n2 = 0;
+            else
+            if (n >= 1)
+                if (n >= 2) {
+                    for (let i = 2; i < n; i++) {
+                        c = n2;
+                        n2 = n1 + n2;
+                        n1 = c;
+                    }
+                }
+            return n2;
+        }
+        let a = [];
+        let str = '';
+        let N = +prompt("Введите N:");
+        if (!Number.isNaN(N))
+            if (N == 0) str = 0;
+            else
+                for (let i = 0; i < N; ++i) {
+                    a[i] = fib(i);
+                    str += a[i] + ' ';
+                }
+        else str = NaN;
+        console.log(str);
+    </script>
+</body>
+
+</html>

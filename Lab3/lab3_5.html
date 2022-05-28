@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang=ru>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 5</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        function camelize(str) {
+            let id;
+            while (str.includes("-")) {
+                id = str.indexOf('-');
+                str = str.slice(0, id) + str[id + 1].toUpperCase() + str.substring(id + 2);
+            }
+            return str;
+        }
+        let str = prompt("Введите строку");
+        alert(camelize(str));
+    </script>
+</body>
+
+</html>

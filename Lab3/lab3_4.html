@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang=ru>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 4</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        function truncate(str, maxlength) {
+            if (str.length > maxlength)
+                str = str.slice(0, maxlength - 1) + '\u{2026}';
+            return str;
+        }
+        let str = prompt("Введите строку");
+        let maxlength = +prompt("Введите её максимальную длинну");
+        alert(truncate(str, maxlength));
+    </script>
+</body>
+
+</html>
